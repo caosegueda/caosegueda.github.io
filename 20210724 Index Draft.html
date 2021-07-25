@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Adams Farm Meeting</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+      html, body {
+      display: flex;
+      justify-content: center;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 15px;
+      }
+      form {
+      border: 5px solid #f1f1f1;
+      }
+      input[type=text], input[type=password], input[type=numbers], select[type=text] {
+      width: 100%;
+      padding: 16px 8px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      }
+      
+      button {
+      background-color: #8ebf42;
+      color: white;
+      padding: 14px 0;
+      margin: 10px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      }
+      h1 {
+      text-align:center;
+      font-size:18;
+      }
+      button:hover {
+      opacity: 0.8;
+      }
+      .formcontainer {
+      text-align: left;
+      margin: 24px 50px 12px;
+      }
+      .container {
+      padding: 16px 0;
+      text-align:left;
+      }
+      span.psw {
+      float: right;
+      padding-top: 0;
+      padding-right: 15px;
+      }
+      /* Change styles for span on extra small screens */
+      @media screen and (max-width: 300px) {
+      span.psw {
+      display: block;
+      float: none;
+      }
+    </style>   <!-- credit to W3docs for us of form -->
+  </head>
+  <body>
+    <form name="submit-to-google-sheet" autocomplete="off">
+      <h1>Adams Farm Meeting</h1>
+        <ol>
+          <li>Enter your name</li>
+          <li>Enter how many in your location</li>
+          <li>Select Submit </li>
+       <li> Write down password and Meeting ID </li>
+      <li>Zoom Link or call the number to listen in</li>
+        </ol>
+      <div class="formcontainer">
+      <hr/>
+
+      <div class="container">
+        <label for="name"><strong>Name</strong></label>
+        <input type="text" placeholder="Enter Name" name="Name" required>
+        
+        <label for="Numb of Part"><strong>Participants</strong></label>
+       
+        <select type="text" name="Numb of Part" placeholder="none" id="pet-select" required>
+    <option value="" disabled selected>--Number Attending--</option>
+    <option value=1>I've already logged in once</option>
+    <option value=1>1</option>
+    <option value=2>2</option>
+    <option value=3>3</option>
+    <option value=4>4</option>
+    <option value=5>5</option>
+    <option value=6>6</option>
+    <option value=7>7</option>
+    <option value=8>8</option>
+    <option value=9>9</option>
+    <option value=10>10</option>
+</select>
+
+        <input id="txtHidden" name="ip_Address" type="hidden">
+      <button type="submit" id="myButton">Submit</button>
+
+      </div>
+    </form>
+    <script src="./main.js"></script>
+  </body>
+</html>
